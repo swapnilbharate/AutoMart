@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540">
+  <rect width="900" height="540" fill="#e8eef5"/>
+  <path d="M160 345h580l-42-118c-12-34-44-57-80-57H307c-38 0-72 24-84 60l-63 115z" fill="#9aa9bb"/>
+  <path d="M264 255h365l24 68H225l39-68z" fill="#d7f3f0"/>
+  <circle cx="285" cy="363" r="48" fill="#263241"/>
+  <circle cx="285" cy="363" r="20" fill="#dce3ec"/>
+  <circle cx="626" cy="363" r="48" fill="#263241"/>
+  <circle cx="626" cy="363" r="20" fill="#dce3ec"/>
+  <text x="450" y="465" text-anchor="middle" font-family="Arial" font-size="42" font-weight="700" fill="#64748b">AutoMart</text>
+</svg>

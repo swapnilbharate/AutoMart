@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <rect width="900" height="600" fill="#dff3ef"/>
+  <rect y="390" width="900" height="210" fill="#f0e8dc"/>
+  <path d="M128 380h650c28 0 52-20 58-47l7-34H109l-9 40c-5 22 12 41 28 41z" fill="#0f766e"/>
+  <path d="M226 297l70-102c19-28 51-44 85-44h225c38 0 72 21 90 55l48 91H226z" fill="#115e59"/>
+  <path d="M326 190h126v83H266l60-83zm154 0h121c22 0 42 12 52 31l28 52H480v-83z" fill="#c8f2eb"/>
+  <circle cx="260" cy="392" r="67" fill="#17202a"/>
+  <circle cx="260" cy="392" r="29" fill="#e8eef5"/>
+  <circle cx="665" cy="392" r="67" fill="#17202a"/>
+  <circle cx="665" cy="392" r="29" fill="#e8eef5"/>
+  <text x="84" y="98" font-family="Arial" font-size="54" font-weight="800" fill="#17202a">Verified used cars</text>
+</svg>

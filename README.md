@@ -160,19 +160,23 @@ CREATE DATABASE automart;
 
 ### Vehicle Listing Page
 
-(Add Screenshot Here)
+<img width="1403" height="752" alt="Screenshot 2026-07-02 092742" src="https://github.com/user-attachments/assets/b02bbd1e-ab6b-4a4b-b539-2923427cb8b9" />
+
 
 ### Vehicle Details Page
 
-(Add Screenshot Here)
+<img width="1883" height="863" alt="Screenshot 2026-07-02 092810" src="https://github.com/user-attachments/assets/11dccffd-b6ca-4166-8b9f-c7db110407e6" />
+
 
 ### Wishlist Page
+<img width="1883" height="863" alt="Screenshot 2026-07-02 092810" src="https://github.com/user-attachments/assets/84ef9475-04d3-42b0-b316-f4113edee072" />
 
-(Add Screenshot Here)
 
 ### Admin Dashboard
 
-(Add Screenshot Here)
+<img width="1862" height="851" alt="Screenshot 2026-07-02 092941" src="https://github.com/user-attachments/assets/79f4a47d-4988-4524-898d-14368bdfb5cf" />
+
+<img width="1832" height="813" alt="Screenshot 2026-07-02 093024" src="https://github.com/user-attachments/assets/24cb9198-3418-4c62-a1ff-f09cc2125181" />
 
 ---
 

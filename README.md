@@ -169,7 +169,7 @@ CREATE DATABASE automart;
 
 
 ### Wishlist Page
-<img width="1883" height="863" alt="Screenshot 2026-07-02 092810" src="https://github.com/user-attachments/assets/84ef9475-04d3-42b0-b316-f4113edee072" />
+<img width="1876" height="820" alt="Screenshot 2026-07-02 092830" src="https://github.com/user-attachments/assets/f44c906d-5852-4eef-9710-94be57fc9ca3" />
 
 
 ### Admin Dashboard

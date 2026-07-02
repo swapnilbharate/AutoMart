@@ -198,7 +198,9 @@ CREATE DATABASE automart;
 
 📧 Email: [bharateswapnil96@gmail.com](mailto:bharateswapnil96@gmail.com)
 
-🔗 LinkedIn: https://linkedin.com/in/swapnil-bharate
+🔗 LinkedIn: www.linkedin.com/in/swapnilbharate96
+
+
 
 💻 GitHub: https://github.com/swapnilbharate
 

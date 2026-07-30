@@ -26,7 +26,7 @@
     </a>
 
     <button class="nav-toggle" type="button" data-nav-toggle>
-        Menu
+        &#9776;
     </button>
 
     <nav class="nav" data-nav

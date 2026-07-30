@@ -226,6 +226,20 @@ body {
     font-size: 15px;
     color: #64748B;
 }
+
+@media(max-width:950px){
+    .browse-page { padding: 1.5rem 1rem 2rem; }
+    .filter-panel { grid-template-columns: repeat(2, 1fr); }
+    .grid.cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width:640px){
+    .browse-page { padding: 1rem 0.5rem 1.5rem; }
+    .filter-panel { grid-template-columns: 1fr; }
+    .grid.cards { grid-template-columns: 1fr; }
+    .browse-header { padding: 1.25rem 1rem; border-radius: 8px; }
+    .filter-panel { padding: 1rem; border-radius: 8px; }
+}
 </style>
 
 <div class="browse-page">

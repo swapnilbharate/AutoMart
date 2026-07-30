@@ -118,6 +118,71 @@
     .btn.small.primary:hover {
         background: #091e12 !important;
     }
+    
+    /* ── Responsive Mobile Cards ── */
+    @media (max-width: 800px) {
+        .container table, .container thead, .container tbody, .container th, .container td, .container tr {
+            display: block !important;
+            width: 100% !important;
+            white-space: normal !important;
+            box-sizing: border-box;
+        }
+        .container thead tr {
+            display: none !important;
+        }
+        .container tr {
+            margin-bottom: 20px !important;
+            border: 2px solid #3a8a58 !important;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .container td {
+            position: relative !important;
+            padding: 12px 10px 12px 35% !important;
+            text-align: right !important;
+            border: none !important;
+            border-bottom: 1px solid #8acca8 !important;
+            min-height: 45px;
+        }
+        .container td:last-child {
+            border-bottom: none !important;
+        }
+        .container td::before {
+            content: attr(data-label);
+            position: absolute;
+            left: 12px;
+            width: 30%;
+            text-align: left;
+            font-weight: 700;
+            color: #052210;
+            top: 12px;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+        }
+        .container td form {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        .container td select {
+            width: auto !important;
+            margin-bottom: 0 !important;
+        }
+        /* Message field might be tall, let title sit at top */
+        .container td:nth-child(4)::before {
+            top: 12px;
+            transform: none;
+        }
+        .container td:nth-child(4) {
+            text-align: left !important;
+            padding: 35px 12px 12px !important;
+        }
+        .container td:nth-child(4)::before {
+            width: 100%;
+        }
+    }
 </style>
 
 <section class="container">
@@ -142,11 +207,11 @@
             <tbody>
             <% for (ContactRequest item : requests) { %>
                 <tr>
-                    <td><%=item.getCarName()%></td>
-                    <td><%=item.getName()%></td>
-                    <td><%=item.getEmail()%><br><%=item.getPhone()%></td>
-                    <td><%=item.getMessage()%></td>
-                    <td>
+                    <td data-label="Vehicle"><%=item.getCarName()%></td>
+                    <td data-label="Customer"><%=item.getName()%></td>
+                    <td data-label="Contact"><%=item.getEmail()%><br><%=item.getPhone()%></td>
+                    <td data-label="Message"><%=item.getMessage()%></td>
+                    <td data-label="Status">
                         <form action="<%=ctx%>/admin/inquiries" method="post">
                             <input type="hidden" name="requestId" value="<%=item.getRequestId()%>">
                             <select name="status">
@@ -157,7 +222,7 @@
                             <button class="btn small primary" type="submit">Update</button>
                         </form>
                     </td>
-                    <td><%=item.getCreatedAt()%></td>
+                    <td data-label="Date"><%=item.getCreatedAt()%></td>
                 </tr>
             <% } %>
             </tbody>

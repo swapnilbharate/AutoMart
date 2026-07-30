@@ -122,6 +122,60 @@ body {
 .ac-tbl thead tr {
     background: linear-gradient(135deg, #0f766e, #0d9488);
 }
+.badge-sd {
+    background: #FEE2E2;
+    color: #DC2626;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+/* ── Responsive Mobile Cards ── */
+@media (max-width: 800px) {
+    .ac-tbl-wrap { overflow: visible !important; }
+    .ac-tbl, .ac-tbl thead, .ac-tbl tbody, .ac-tbl th, .ac-tbl td, .ac-tbl tr {
+        display: block !important;
+        width: 100% !important;
+        white-space: normal !important;
+        box-sizing: border-box;
+    }
+    .ac-tbl thead tr { display: none !important; }
+    .ac-tbl tr {
+        margin-bottom: 20px !important;
+        border: 1px solid #ccc !important;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        background: #fff;
+    }
+    .ac-tbl td {
+        position: relative !important;
+        padding: 10px 10px 10px 40% !important;
+        text-align: right !important;
+        border: none !important;
+        border-bottom: 1px solid #eee !important;
+        min-height: 40px;
+    }
+    .ac-tbl td:last-child { border-bottom: none !important; }
+    .ac-tbl td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        width: 35%;
+        text-align: left;
+        font-weight: 600;
+        color: #64748B;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+    }
+    .ac-tbl td form { display: inline-block; }
+}
+
 .ac-tbl thead th {
     padding: 13px 15px;
     text-align: left;
@@ -359,21 +413,21 @@ body {
                     <tbody>
                     <% int i = 1; for (Car car : cars) { %>
                         <tr>
-                            <td class="c-num"><%=i++%></td>
-                            <td><span class="c-name"><%=car.getCarName()%></span></td>
-                            <td><span class="c-brand"><%=car.getBrandName()%></span></td>
-                            <td class="c-year"><%=car.getManufacturingYear()%></td>
-                            <td><%=car.getFuelType()%></td>
-                            <td class="c-price"><%=money.format(car.getPrice())%></td>
-                            <td>
+                            <td data-label="#" class="c-num"><%=i++%></td>
+                            <td data-label="Car Name"><span class="c-name"><%=car.getCarName()%></span></td>
+                            <td data-label="Brand"><span class="c-brand"><%=car.getBrandName()%></span></td>
+                            <td data-label="Year" class="c-year"><%=car.getManufacturingYear()%></td>
+                            <td data-label="Fuel"><%=car.getFuelType()%></td>
+                            <td data-label="Price" class="c-price"><%=money.format(car.getPrice())%></td>
+                            <td data-label="Status">
                                 <% if ("AVAILABLE".equals(car.getStatus())) { %>
                                     <span class="badge-av">Available</span>
                                 <% } else { %>
-                                    <span class="badge-sold">Sold</span>
+                                    <span class="badge-sd">Sold</span>
                                 <% } %>
                             </td>
-                            <td class="c-city"><%=car.getCity()%></td>
-                            <td>
+                            <td data-label="City"><%=car.getCity()%></td>
+                            <td data-label="Actions">
                                 <div class="ac-act">
                                     <a class="btn-edit" href="<%=ctx%>/admin/cars?editId=<%=car.getCarId()%>">Edit</a>
                                     <form action="<%=ctx%>/admin/cars" method="post" style="display:inline" onsubmit="return confirm('Delete this car?');">

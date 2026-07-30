@@ -156,9 +156,24 @@ body { background: #22d3ee; }
 
 @media (max-width: 768px) {
     .au-tbl thead { display: none; }
-    .au-tbl tbody tr { display: block; border: 2px solid #0e7490; border-radius: 10px; margin-bottom: 14px; }
-    .au-tbl tbody td { display: block; border-right: none; border-bottom: 1px solid #a5f3fc; }
+    .au-tbl tbody tr { display: block; border: 2px solid #0e7490; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+    .au-tbl tbody td { display: block; border-right: none; border-bottom: 1px solid #a5f3fc; position: relative; padding: 10px 10px 10px 35%; text-align: right; min-height: 40px; }
     .au-tbl tbody td:last-child { border-bottom: none; }
+    .au-tbl tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        width: 30%;
+        text-align: left;
+        font-weight: 600;
+        color: #0f766e;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+    }
+    .au-tbl tbody td select, .au-tbl tbody td input { width: 100%; box-sizing: border-box; text-align: right; }
+    .ac-act { justify-content: flex-end; }
 }
 </style>
 
@@ -195,18 +210,18 @@ body { background: #22d3ee; }
                         <tr>
                             <form action="<%=ctx%>/admin/users" method="post">
                                 <input type="hidden" name="userId" value="<%=item.getUserId()%>">
-                                <td class="c-num"><%=i++%></td>
-                                <td><input name="name" value="<%=item.getName()%>"></td>
-                                <td><span class="c-email"><%=item.getEmail()%></span></td>
-                                <td><input name="phone" value="<%=item.getPhone()%>"></td>
-                                <td><input name="city" value="<%=item.getCity()%>"></td>
-                                <td>
+                                <td data-label="#" class="c-num"><%=i++%></td>
+                                <td data-label="Name"><input name="name" value="<%=item.getName()%>"></td>
+                                <td data-label="Email"><span class="c-email"><%=item.getEmail()%></span></td>
+                                <td data-label="Phone"><input name="phone" value="<%=item.getPhone()%>"></td>
+                                <td data-label="City"><input name="city" value="<%=item.getCity()%>"></td>
+                                <td data-label="Role">
                                     <select name="role">
                                         <option <%= "USER".equals(item.getRole()) ? "selected" : ""%>>USER</option>
                                         <option <%= "ADMIN".equals(item.getRole()) ? "selected" : ""%>>ADMIN</option>
                                     </select>
                                 </td>
-                                <td>
+                                <td data-label="Actions">
                                     <div class="ac-act">
                                         <button class="btn-save" type="submit">Save</button>
                             </form>

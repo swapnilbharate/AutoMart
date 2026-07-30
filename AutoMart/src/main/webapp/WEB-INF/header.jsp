@@ -15,6 +15,30 @@
 
     <link rel="stylesheet" href="<%=ctx%>/assets/css/style.css">
     <script defer src="<%=ctx%>/assets/js/app.js"></script>
+
+    <style>
+        @media (max-width: 950px) {
+            .nav a {
+                display: block !important;
+                width: 100% !important;
+                padding: 12px 20px !important;
+                background: #f0fdfa !important;
+                color: #0f766e !important;
+                border: 2px solid #14b8a6 !important;
+                border-radius: 8px !important;
+                text-align: center !important;
+                font-weight: 700 !important;
+                margin-bottom: 8px !important;
+                box-sizing: border-box !important;
+            }
+            .nav span.welcome {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+                margin-bottom: 8px !important;
+            }
+        }
+    </style>
 </head>
 
 <body>

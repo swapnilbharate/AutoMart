@@ -235,6 +235,19 @@ body {
     background: linear-gradient(90deg, #F59E0B, #D97706);
 }
 .panel.activity .bar-count { color: #D97706; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 950px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .chart-row { grid-template-columns: 1fr; }
+    .dash-banner { flex-direction: column; align-items: flex-start; }
+    .dash-banner-right { width: 100%; display: grid; grid-template-columns: 1fr 1fr; }
+    .dash-quick-btn { text-align: center; }
+}
+@media (max-width: 600px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .dash-banner-right { grid-template-columns: 1fr; }
+}
 </style>
 
 

@@ -251,7 +251,8 @@
         <h2><%=car.getCarName()%></h2>
         <ul style="padding-left: 20px; font-size: 13px; color: #4a7a9b; line-height: 1.8;">
         <% 
-            String[] sentences = car.getDescription().split("\\.\\s*");
+            String cleanDesc = car.getDescription() != null ? car.getDescription().replaceAll("[^\\x20-\\x7E]", "") : "";
+            String[] sentences = cleanDesc.split("\\.\\s*");
             for (String s : sentences) {
                 if (!s.trim().isEmpty()) {
         %>

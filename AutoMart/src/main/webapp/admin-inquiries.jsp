@@ -120,40 +120,42 @@
             <p class="muted">Manage dealer contact requests and follow-up status.</p>
         </div>
     </div>
-    <table>
-        <thead>
-            <tr>
-                <th>Vehicle</th>
-                <th>Customer</th>
-                <th>Contact</th>
-                <th>Message</th>
-                <th>Status</th>
-                <th>Date</th>
-            </tr>
-        </thead>
-        <tbody>
-        <% for (ContactRequest item : requests) { %>
-            <tr>
-                <td><%=item.getCarName()%></td>
-                <td><%=item.getName()%></td>
-                <td><%=item.getEmail()%><br><%=item.getPhone()%></td>
-                <td><%=item.getMessage()%></td>
-                <td>
-                    <form action="<%=ctx%>/admin/inquiries" method="post">
-                        <input type="hidden" name="requestId" value="<%=item.getRequestId()%>">
-                        <select name="status">
-                            <option <%= "NEW".equals(item.getStatus()) ? "selected" : ""%>>NEW</option>
-                            <option <%= "CONTACTED".equals(item.getStatus()) ? "selected" : ""%>>CONTACTED</option>
-                            <option <%= "CLOSED".equals(item.getStatus()) ? "selected" : ""%>>CLOSED</option>
-                        </select>
-                        <button class="btn small primary" type="submit">Update</button>
-                    </form>
-                </td>
-                <td><%=item.getCreatedAt()%></td>
-            </tr>
-        <% } %>
-        </tbody>
-    </table>
+    <div style="overflow-x: auto;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Vehicle</th>
+                    <th>Customer</th>
+                    <th>Contact</th>
+                    <th>Message</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% for (ContactRequest item : requests) { %>
+                <tr>
+                    <td><%=item.getCarName()%></td>
+                    <td><%=item.getName()%></td>
+                    <td><%=item.getEmail()%><br><%=item.getPhone()%></td>
+                    <td><%=item.getMessage()%></td>
+                    <td>
+                        <form action="<%=ctx%>/admin/inquiries" method="post">
+                            <input type="hidden" name="requestId" value="<%=item.getRequestId()%>">
+                            <select name="status">
+                                <option <%= "NEW".equals(item.getStatus()) ? "selected" : ""%>>NEW</option>
+                                <option <%= "CONTACTED".equals(item.getStatus()) ? "selected" : ""%>>CONTACTED</option>
+                                <option <%= "CLOSED".equals(item.getStatus()) ? "selected" : ""%>>CLOSED</option>
+                            </select>
+                            <button class="btn small primary" type="submit">Update</button>
+                        </form>
+                    </td>
+                    <td><%=item.getCreatedAt()%></td>
+                </tr>
+            <% } %>
+            </tbody>
+        </table>
+    </div>
 </section>
 
 <%@ include file="/WEB-INF/footer.jsp" %>

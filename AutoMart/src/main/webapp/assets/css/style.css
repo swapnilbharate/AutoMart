@@ -636,14 +636,31 @@ th { background: #eef4f8; font-size: 0.9rem; }
         top: 100%;
         left: 0;
         right: 0;
-        background: #fff;
+        background: #f8fafc;
         padding: 20px;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: stretch;
         box-shadow: 0 5px 15px rgba(0,0,0,.08);
         border-bottom: 3px solid #14b8a6;
+        gap: 10px;
     }
     .nav.open { display: flex !important; }
+    
+    .nav a {
+        display: block;
+        padding: 12px 20px;
+        background: #ffffff;
+        color: #0f766e !important;
+        border: 1.5px solid #ccfbf1;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 700;
+        box-shadow: 0 2px 5px rgba(0,0,0,.03);
+    }
+    .nav a:hover {
+        background: #f0fdfa;
+        border-color: #99f6e4;
+    }
     
     .hero, .detail-layout, .grid.two, .chart-row { grid-template-columns: 1fr; }
     .grid.cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }

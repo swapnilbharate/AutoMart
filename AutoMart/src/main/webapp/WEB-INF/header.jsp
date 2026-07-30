@@ -18,24 +18,34 @@
 
     <style>
         @media (max-width: 950px) {
+            .nav {
+                padding: 10px 15px !important;
+                gap: 5px !important;
+            }
             .nav a {
                 display: block !important;
                 width: 100% !important;
-                padding: 12px 20px !important;
-                background: #f0fdfa !important;
+                padding: 10px 15px !important;
+                background: transparent !important;
                 color: #0f766e !important;
-                border: 2px solid #14b8a6 !important;
-                border-radius: 8px !important;
-                text-align: center !important;
-                font-weight: 700 !important;
-                margin-bottom: 8px !important;
-                box-sizing: border-box !important;
+                border: none !important;
+                border-bottom: 1px solid #ccfbf1 !important;
+                border-radius: 0 !important;
+                text-align: left !important;
+                font-weight: 600 !important;
+                margin-bottom: 0 !important;
+                box-shadow: none !important;
+            }
+            .nav a:last-child {
+                border-bottom: none !important;
             }
             .nav span.welcome {
                 display: block !important;
                 width: 100% !important;
-                text-align: center !important;
-                margin-bottom: 8px !important;
+                text-align: left !important;
+                padding: 10px 15px !important;
+                color: #0f766e !important;
+                margin-bottom: 0 !important;
             }
         }
     </style>

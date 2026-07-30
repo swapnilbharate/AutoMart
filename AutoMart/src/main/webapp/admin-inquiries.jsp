@@ -76,10 +76,17 @@
         color: #0d3520 !important;
         border: 1px solid #8acca8 !important;
         vertical-align: top !important;
+        white-space: nowrap !important;
     }
     .container table tbody td:first-child {
         font-weight: 700 !important;
         color: #0a4a28 !important;
+    }
+    
+    /* Allow message column to wrap so it doesn't get ridiculously wide */
+    .container table tbody td:nth-child(4) {
+        white-space: normal !important;
+        min-width: 250px;
     }
 
     /* ── Dropdown ── */

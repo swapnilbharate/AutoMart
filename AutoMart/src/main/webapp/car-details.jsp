@@ -224,6 +224,10 @@
 
   @media (max-width: 900px) {
     .am-detail-grid { grid-template-columns: 1fr; }
+    .am-rec-card { width: calc(50% - 0.5rem); }
+  }
+  @media (max-width: 600px) {
+    .am-rec-card { width: 100%; }
   }
 </style>
 
@@ -245,7 +249,18 @@
 
       <div class="am-panel am-desc">
         <h2><%=car.getCarName()%></h2>
-        <p><%=car.getDescription()%></p>
+        <ul style="padding-left: 20px; font-size: 13px; color: #4a7a9b; line-height: 1.8;">
+        <% 
+            String[] sentences = car.getDescription().split("\\.\\s*");
+            for (String s : sentences) {
+                if (!s.trim().isEmpty()) {
+        %>
+            <li><%= s.trim() + "." %></li>
+        <% 
+                }
+            } 
+        %>
+        </ul>
       </div>
     </div>
 

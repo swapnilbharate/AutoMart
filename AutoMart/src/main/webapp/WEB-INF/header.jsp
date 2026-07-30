@@ -21,13 +21,14 @@
 
 <header class="site-header">
 
-    <a class="brand" href="<%=ctx%>/home">
-        AutoMart
-    </a>
-
-    <button class="nav-toggle" type="button" data-nav-toggle>
-        &#9776;
-    </button>
+    <div style="display: flex; align-items: center; gap: 15px;">
+        <button class="nav-toggle" type="button" data-nav-toggle>
+            &#9776;
+        </button>
+        <a class="brand" href="<%=ctx%>/home">
+            AutoMart
+        </a>
+    </div>
 
     <nav class="nav" data-nav
          style="display:flex;align-items:center;gap:15px;flex-wrap:wrap;">

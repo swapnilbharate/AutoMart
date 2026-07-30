@@ -14,16 +14,19 @@ import java.io.IOException;
 public class CarDetailsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         try {
+            User user = (User) request.getSession().getAttribute("user");
+            if (user == null) {
+                response.sendRedirect("login.jsp?error=Please login first to view car details");
+                return;
+            }
+
             int carId = Integer.parseInt(request.getParameter("id"));
             Car car = new CarDAO().findById(carId);
             if (car == null) {
                 response.sendRedirect("cars?error=Car not found");
                 return;
             }
-            User user = (User) request.getSession().getAttribute("user");
-            if (user != null) {
-                request.setAttribute("wishlisted", new WishlistDAO().exists(user.getUserId(), carId));
-            }
+            request.setAttribute("wishlisted", new WishlistDAO().exists(user.getUserId(), carId));
             request.setAttribute("car", car);
             request.setAttribute("recommendedCars", new CarDAO().recommended(car.getCarId(), car.getBrandId(), car.getCity()));
             request.getRequestDispatcher("/car-details.jsp").forward(request, response);

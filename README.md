@@ -5,6 +5,7 @@ AutoMart is a Full-Stack Java Web Application that allows users to buy and explo
 ---
 ## 🌍 Live Demo
 [View Live Demo Here](https://automart-dryg.onrender.com)
+
 *(Note: It may take a minute to load initially if the server is asleep)*
 
 ---

@@ -3,6 +3,11 @@
 AutoMart is a Full-Stack Java Web Application that allows users to buy and explore second-hand vehicles online. The platform provides a user-friendly interface for browsing cars, searching with filters, saving favorite vehicles, and contacting dealers. It also includes an Admin Dashboard for managing vehicle listings and users.
 
 ---
+## 🌍 Live Demo
+[View Live Demo Here](https://automart-dryg.onrender.com)
+*(Note: It may take a minute to load initially if the server is asleep)*
+
+---
 
 ## 📌 Features
 
